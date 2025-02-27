@@ -1,7 +1,7 @@
 
 ### AGGM Syntax
 
-Aggm syntax can be anything, from descriptions, emojis, or pseudo-code. Here are some examples:
+Aggm syntax can be anything, from descriptions, emojis, or pseudo-code. Here's an example of a video-game in AGGM:
 
 ```
 A video-game where the player is blue. 
