@@ -1,0 +1,16 @@
+// Demo AGGM file
+# comments can also be written like this
+
+
+import AggmUI
+
+print " welcome to aggm "
+
+for i in 5:
+    print "Hello"
+
+ContentView = View():
+  VStack:
+    Text "Hello world"
+    Image(systemname:"person")
+   
