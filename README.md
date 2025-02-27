@@ -83,26 +83,6 @@ CALL printFibonacci(6)
 
 ```
 
-Natural language syntax:
-
-```
-
-Function to print the Fibonacci sequence up to a given number of terms:
-    Declare a function called printFibonacci that takes a single argument n
-        Declare two variables, first and second, and set them to 0 and 1 respectively
-        Check if n is less than or equal to 0
-            If so, print "Please enter a positive number of terms" and return
-        Check if n is equal to 1
-            If so, print the first number and return
-        Print the first two numbers
-        For each number from 3 to n
-            Calculate the next number in the sequence
-            Print the next number
-            Update the first and second numbers
-    End the function
-
-```
-
 More Natural Language Syntax:
 
 ```
