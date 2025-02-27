@@ -4,7 +4,7 @@
 
 # AGGM Programming Language
 
-## Welcome to AGGM
+### Welcome to AGGM
 
 AGGM is a natural language programming language that uses python as an interpreter. AGGM can have any syntax you want, from pseudo code, to descriptions, to a made-up syntax! AGGM uses the [AggmGPT](https://github.com/Adolfo-GM/AggmGPT-2) local language model to interpret your code with python. AGGM is a great way to learn programming, and is a fun way to code!
 
@@ -13,7 +13,7 @@ To learn more about the AGGM programming language, check out these resources:
 - [Getting Started](resources/getting-started.md)
 - [Aggm Syntax](resources/aggm-syntax.md)
 
-## Examples
+### Examples
 
 Emoji syntax:
 
@@ -114,22 +114,4 @@ A fixed bottom navigation bar containing 4 tabs: Home, Search, Notifications, an
 
 
 
-where ``$BUNDLE_PREFIX`` is a string that will be prepended to the build 
-date to give the bundle identifier of the toolchain's ``Info.plist``. For 
-instance, if ``$BUNDLE_PREFIX`` was ``com.example``, the toolchain 
-produced will have the bundle identifier ``com.example.YYYYMMDD``. It 
-will be created in the directory you run the script with a filename 
-of the form: ``swift-LOCAL-YYYY-MM-DD-a-osx.tar.gz``.
-
-Beyond building the toolchain, ``build-toolchain`` also supports the 
-following (non-exhaustive) set of useful options:
-
-- ``--dry-run``: Perform a dry run build. This is off by default.
-- ``--test``: Test the toolchain after it has been compiled. This is off by default.
-- ``--distcc``: Use distcc to speed up the build by distributing the C++ part of
-  the swift build. This is off by default.
-- ``--sccache``: Use sccache to speed up subsequent builds of the compiler by
-  caching more C++ build artifacts. This is off by default.
-
-More options may be added over time. Please pass ``--help`` to
-``build-toolchain`` to see the full set of options.
+### We hope you enjoy coding with AGGM!
