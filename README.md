@@ -1,5 +1,5 @@
 <picture>
-  <img src="banner.png" alt="Swift logo" height="70">
+  <img src="banner.png" alt="Swift logo" height="100">
 </picture>
 
 # AGGM Programming Language
