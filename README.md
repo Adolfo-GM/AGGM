@@ -4,72 +4,115 @@
 
 # AGGM Programming Language
 
-AGGM is a high-performance system programming language.  It has a clean
-and modern syntax, offers seamless access to existing C and Objective-C code
-and frameworks, and is memory-safe by default.
+## Welcome to AGGM
 
-Although inspired by Objective-C and many other languages, Swift is not itself a
-C-derived language. As a complete and independent language, Swift packages core
-features like flow control, data structures, and functions, with high-level
-constructs like objects, protocols, closures, and generics. Swift embraces
-modules, eliminating the need for headers and the code duplication they entail.
+AGGM is a natural language programming language that uses python as an interpreter. AGGM can have any syntax you want, from pseudo code, to descriptions, to a made-up syntax! AGGM uses the [AggmGPT](https://github.com/Adolfo-GM/AggmGPT-2) local language model to interpret your code with python. AGGM is a great way to learn programming, and is a fun way to code!
 
-To learn more about the programming language, visit [swift.org](https://swift.org/documentation/).
+To learn more about the AGGM programming language, check out these resources:
 
-- [Contributing to Swift](#contributing-to-swift)
-- [Getting Started](#getting-started)
-  - [Swift Toolchains](#swift-toolchains)
-  - [Build Failures](#build-failures)
-- [Learning More](#learning-more)
+- [Getting Started](resources/getting-started.md)
+- [Aggm Syntax](resources/aggm-syntax.md)
 
-## Contributing to Swift
+## Examples
 
-Contributions to Swift are welcomed and encouraged! Please see the
-[Contributing to Swift guide](https://swift.org/contributing/).
+Emoji syntax:
 
-Before submitting the pull request, please make sure you have [tested your
- changes](https://github.com/apple/swift/blob/main/docs/ContinuousIntegration.md)
- and that they follow the Swift project [guidelines for contributing
- code](https://swift.org/contributing/#contributing-code).
-
-To be a truly great community, [Swift.org](https://swift.org/) needs to welcome
-developers from all walks of life, with different backgrounds, and with a wide
-range of experience. A diverse and friendly community will have more great
-ideas, more unique perspectives, and produce more great code. We will work
-diligently to make the Swift community welcoming to everyone.
-
-To give clarity of what is expected of our members, Swift has adopted the
-code of conduct defined by the Contributor Covenant. This document is used
-across many open source communities, and we think it articulates our values
-well. For more, see the [Code of Conduct](https://swift.org/code-of-conduct/).
-
-## Getting Started
-
-If you are interested in:
-- Contributing fixes and features to the compiler: See our
-  [How to Submit Your First Pull Request guide](/docs/HowToGuides/FirstPullRequest.md).
-- Building the compiler as a one-off: See our [Getting Started guide][].
-- Building a toolchain as a one-off: Follow the [Getting Started guide][]
-  up until the "Building the project" section. After that, follow the
-  instructions in the [Swift Toolchains](#swift-toolchains) section below.
-
-We also have an [FAQ](/docs/HowToGuides/FAQ.md) that answers common questions.
-
-[Getting Started guide]: /docs/HowToGuides/GettingStarted.md
-
-### Swift Toolchains
-
-#### Building
-
-Swift toolchains are created using the script
-[build-toolchain](https://github.com/apple/swift/blob/main/utils/build-toolchain). This
-script is used by swift.org's CI to produce snapshots and can allow for one to
-locally reproduce such builds for development or distribution purposes. A typical 
-invocation looks like the following:
-
-```sh
-  $ ./swift/utils/build-toolchain $BUNDLE_PREFIX
 ```
+def 😎(💦, 😂):
+    def 🥳():
+        😢 = 💦 / 😂
+        return 😢
+    return 🥳()
+
+😊 = 😎(150, 3)
+print(😊)
+```
+
+Made-up syntax:
+
+```
+~{  
+    >vortex weave &flow /num -> &threads /num :.  
+    ~{  
+        &strand /num = &flow ^/ &threads :.  
+        >return &strand :.  
+    }~  
+
+    &glow /num = weave -> 150 -> 3 :.  
+    >pulse &glow :.  
+}~
+
+```
+
+Pseudo-code syntax:
+
+```
+FUNCTION printFibonacci(n)
+    // Declare variables for first two numbers and next number
+    SET first = 0
+    SET second = 1
+    
+    // Handle edge cases
+    IF n <= 0 THEN
+        PRINT "Please enter a positive number of terms"
+        RETURN
+    END IF
+    
+    IF n = 1 THEN
+        PRINT first
+        RETURN
+    END IF
+    
+    // Print first two numbers
+    PRINT first
+    PRINT second
+    
+    // Generate and print remaining numbers
+    FOR i = 3 TO n DO
+        SET next = first + second
+        PRINT next
+        SET first = second
+        SET second = next
+    END FOR
+END FUNCTION
+
+// Example usage
+CALL printFibonacci(6)
+// Output would be: 0, 1, 1, 2, 3, 5
+
+
+```
+
+Natural language syntax:
+
+```
+
+Function to print the Fibonacci sequence up to a given number of terms:
+    Declare a function called printFibonacci that takes a single argument n
+        Declare two variables, first and second, and set them to 0 and 1 respectively
+        Check if n is less than or equal to 0
+            If so, print "Please enter a positive number of terms" and return
+        Check if n is equal to 1
+            If so, print the first number and return
+        Print the first two numbers
+        For each number from 3 to n
+            Calculate the next number in the sequence
+            Print the next number
+            Update the first and second numbers
+    End the function
+
+```
+
+More Natural Language Syntax:
+
+```
+
+A fixed bottom navigation bar containing 4 tabs: Home, Search, Notifications, and Profile. Each tab has an icon centered above a label. The active tab highlights in blue, while inactive tabs are gray. Above the navbar, the main content area displays a title matching the selected tab, centered at the top. The background is white, fonts are sans-serif, and the navbar has a subtle shadow for separation. The layout automatically adjusts to screen size, keeping the navbar pinned at the bottom.
+
+```
+
+
+
 
 where ``$BUNDLE_PREFIX`` is a string that will be prepended to the build 
 date to give the bundle identifier of the toolchain's ``Info.plist``. For 
@@ -90,49 +133,3 @@ following (non-exhaustive) set of useful options:
 
 More options may be added over time. Please pass ``--help`` to
 ``build-toolchain`` to see the full set of options.
-
-#### Installing into Xcode
-
-On macOS if one wants to install such a toolchain into Xcode:
-
-1. Untar and copy the toolchain to one of `/Library/Developer/Toolchains/` or
-   `~/Library/Developer/Toolchains/`. E.g.:
-
-```sh
-  $ sudo tar -xzf swift-LOCAL-YYYY-MM-DD-a-osx.tar.gz -C /
-  $ tar -xzf swift-LOCAL-YYYY-MM-DD-a-osx.tar.gz -C ~/
-```
-
-The script also generates an archive containing debug symbols which
-can be installed over the main archive allowing symbolication of any
-compiler crashes.
-
-```sh
-  $ sudo tar -xzf swift-LOCAL-YYYY-MM-DD-a-osx-symbols.tar.gz -C /
-  $ tar -xzf swift-LOCAL-YYYY-MM-DD-a-osx-symbols.tar.gz -C ~/
-```
-
-2. Specify the local toolchain for Xcode's use via `Xcode->Toolchains`.
-
-### Build Failures
-
-Try the suggestions in
-[Troubleshooting build issues](/docs/HowToGuides/GettingStarted.md#troubleshooting-build-issues).
-
-Make sure you are using the
-[correct release](/docs/HowToGuides/GettingStarted.md#installing-dependencies)
-of Xcode.
-
-If you have changed Xcode versions but still encounter errors that appear to
-be related to the Xcode version, try passing `--clean` to `build-script`.
-
-When a new version of Xcode is released, you can update your build without
-recompiling the entire project by passing `--reconfigure` to `build-script`.
-
-## Learning More
-
-Be sure to look at the [documentation index](/docs/README.md) for a bird's eye
-view of the available documentation. In particular, the documents titled
-[Debugging the Swift Compiler](docs/DebuggingTheCompiler.md) and
-[Continuous Integration for Swift](docs/ContinuousIntegration.md) are very
-helpful to understand before submitting your first PR.
