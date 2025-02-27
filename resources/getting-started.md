@@ -11,7 +11,7 @@ cd AGGM
 
 ```
 git lfs install
-git clone https://huggingface.co/Adolfo-GM/AggmGPT temp-folder
+git clone https://huggingface.co/Adolfo-GM/AggmGPT-2 temp-folder
 mv temp-folder/* .
 mv temp-folder/.* .  
 rmdir temp-folder
