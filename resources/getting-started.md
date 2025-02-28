@@ -27,3 +27,4 @@ rmdir temp-folder
 
  ``` 
  with main.aggm replaced by your file name.
+- Note that this overview may not cover everything, you may need to do some tweaking to make the code work for your machine. 
