@@ -96,4 +96,4 @@ A fixed bottom navigation bar containing 4 tabs: Home, Search, Notifications, an
 
 
 
-### We hope you enjoy coding with AGGM!
+### I hope you enjoy coding with AGGM!
